@@ -1,0 +1,16 @@
+#root {
+  line-height: normal;
+  box-sizing: unset;
+}
+embed,
+img,
+object,
+video {
+  max-width: none;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-family: unset;
+}

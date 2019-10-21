@@ -1,0 +1,60 @@
+{
+  "name": "2019-doc-metoo",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-var cross-env NODE_ENV=development APP_NAME=$npm_package_name parcel index.html",
+    "gitrepo": "cross-var hub create -p Yleisradio/lusi-dataviz-$npm_package_name",
+    "deploy": "npm run build && npx dataviz-deploy generate --dir dist && dataviz-deploy sync --folder dist lusi $npm_package_name",
+    "deploy:test": "npm run build:test && npx dataviz-deploy generate --dir build && dataviz-deploy sync lusi-test $npm_package_name",
+    "build": "cross-var cross-env NODE_ENV=production APP_NAME=$npm_package_name parcel build --public-url https://lusi-dataviz.ylestatic.fi/2019-doc-metoo/ index.html --out-dir ./dist && cross-var echo \"https://lusi-dataviz.ylestatic.fi/$npm_package_name\"",
+    "build:test": "cross-var cross-env NODE_ENV=production APP_NAME=$npm_package_name parcel build index.html --public-url https://lusi-dataviz.test.ylestatic.fi/$npm_package_name/ --out-dir ./build && cross-var echo \"https://lusi-dataviz.test.ylestatic.fi/$npm_package_name\""
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "autoprefixer": "^7.2.1",
+    "jquery": "^3.4.1",
+    "postcss-modules": "^1.4.1",
+    "postcss-prefix-selector": "^1.7.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "typed.js": "^2.0.11"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "src/public"
+    ],
+    "watcherGlob": "**"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "postcss-prefix-selector": {
+        "prefix": "#dataviz-app"
+      },
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.1.1",
+    "cross-var": "^1.1.0",
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "0.0.6"
+  }
+}

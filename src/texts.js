@@ -17,22 +17,27 @@ const giveRandomAvatar = (function() {
 })();
 
 /// TEKSTIT ALKAA
+export const cover = {
+  header: 'Miltä nettihäirintä tuntuu?',
+  body: 'Testaa itse Docventuresin simulakrumissa!',
+  startButton: 'Eteenpäin',
+};
 export const screen0 = {
   body:
     'Tämä juttu perustuu todellisiin esimerkkeihin ja saattaa sisältää ahdistavaa materiaalia',
-  startButton: 'Aloita',
+  startButton: 'Eteenpäin',
 };
 
 export const screen1 = {
   body:
     'Olet viime viikolla twiitannut ajankohtaisesta aiheesta. Tunnettu yhteiskunnallinen vaikuttaja on siitä lähtien pommittanut sinua viesteillä. Yritit ohittaa asian olankohautuksella, mutta meno vain pahenee.',
-  startButton: 'Aloita',
+  startButton: 'Eteenpäin',
 };
 
 export const screen2 = {};
 
 export const screen3 = {
-  userpic: `${buildPath}img/kansanedustaja.jpg`,
+  userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
   username: 'Vaikuttaja',
   keskustelu: [
     {
@@ -100,7 +105,7 @@ export const screen5 = {
       // Tämä eka viesti ei  näy
       meta: '1: kansanedustajan vastauspostaus syytöksiin',
       viesti: '@abc valehtelee! ',
-      userpic: `${buildPath}img/kansanedustaja.jpg`,
+      userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
       username: 'kansanedustaja',
       userhandle: '@handle',
       viive: 0,
@@ -154,7 +159,7 @@ export const screen5 = {
   },
 };
 export const screen6 = {
-  userpic: `${buildPath}img/kansanedustaja.jpg`,
+  userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
   username: 'Vaikuttaja',
   notificationMessage:
     'Täällä on taas joku @käyttäjä-rukka kuvitellut liikaa itsestään. En ole ollut...',
@@ -442,7 +447,7 @@ export const screen15 = {
     {
       viesti:
         ' Mitä ihmettä nyt taas jengi?! Eiköhän tämä somemestaus jo riitä? Meitsi on sun puolella @käyttäjä, kukaan ei ansaitse tällaista myllytystä. Tsemppiä!!!',
-      userpic: `${buildPath}/img/rikurantala.jpg`,
+      userpic: `${buildPath}img/rikurantala.jpg`,
       username: 'Riku Rantala',
       userhandle: '@rikurantala',
       viive: 1200,
@@ -450,37 +455,34 @@ export const screen15 = {
     {
       viesti:
         ' Tätä tapahtuu ihan liikaa ja erityisesti naisille, häirintä lähtee lapasista aivan mitättömistä jutuista. JOKU ROTI TÄHÄN TOUHUUN! EI ANNETA ÖYKKÄREIDEN MÖYHÖTTÄÄ RAUHASSA. Jos näet jonkun joutuneen paskamyrskyyn, PUUTU PELIIN ja asetu uhrin puolelle!',
-      userpic: `${buildPath}/img/tunnamilonoff.png`,
+      userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',
       viive: 1200,
     },
     {
       viesti: ' Ei liikaa näy jäbiä näissä puuhissa. ',
-      userpic: `${buildPath}/img/rikurantala.jpg`,
+      userpic: `${buildPath}img/rikurantala.jpg`,
       username: 'Riku Rantala',
       userhandle: '@rikurantala',
       viive: 1200,
     },
     {
       viesti:
-        ' Jos taas olet kohdannut häirintää (kaikki sympatiat tyypille täältä!), niin esim. näistä jutuista voi olla hyötyä: https://twitter.com/vehkoo/status/927846892154884096 ja https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/',
-      userpic: `${buildPath}/img/tunnamilonoff.png`,
+        ' Jos taas olet kohdannut häirintää (kaikki sympatiat tyypille täältä!), niin esim. näistä jutuista voi olla hyötyä: <a href="https://twitter.com/vehkoo/status/927846892154884096">https://twitter.com/vehkoo/status/927846892154884096 ja <a href="https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/">https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/</a>',
+      userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',
       viive: 1200,
     },
     {
       viesti: `
-Jutun tekijät:
-
 teksti: Mari Uusivirta
-grafiikka: Annukka Palmén-Väisänen & Tapio Kantele
-konseptisuunnittelu: Tapio kantele & Mari Uusivirta
-tekninen toteutus: Tapio Kantele & Antti Saarenpää
-Tuottaja: Kaisa Kirves
+grafiikka: Tapio Kantele & Annukka Palmén-Väisänen
+toteutus: Tapio Kantele, Antti Saarenpää & Mari Uusivirta
+tuottaja: Kaisa Kirves
 	    `,
-      userpic: `${buildPath}/img/ylelogo.png`,
+      userpic: `${buildPath}img/ylelogo.png`,
       username: 'Yleisradio',
       userhandle: '@Yleisradio',
       viive: 1200,

@@ -20,6 +20,18 @@ p {
   margin-inline-end: 0px;
 }
 
+.etusivun_logo {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.etusivun_logo img {
+  width: 100%;
+}
+
 #clock {
   font-weight: 100;
   font-size: 100px;
@@ -62,7 +74,7 @@ p {
 }
 
 #parentWrapper {
-  background-color: whitesmoke;
+  background-color: black;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
   color: #ecf0f1;
@@ -1747,6 +1759,7 @@ animation-duration: 2s;
 
 #parentWrapper #mainWrapper .twitter .twittercommentscontainer .viesti {
   font-size: 14px;
+  white-space: pre-line;
 }
 
 #parentWrapper #mainWrapper .twitter .twittercommentscontainer .vastaus {
@@ -1972,12 +1985,13 @@ animation-duration: 2s;
 
 #parentWrapper #mainWrapper .twitter #commentscontainer {
   height: 70%;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
 }
 
 #parentWrapper #mainWrapper .twitter.twiittaa #commentscontainer {
   height: 82%;
+  padding-bottom: 150px;
 }
 
 #parentWrapper #mainWrapper .twitter.mentions #commentscontainer {
@@ -2121,7 +2135,7 @@ animation-duration: 2s;
   min-height: 42px;
 }
 #parentWrapper #mainWrapper .alapalkki .formi button {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0px 6px;
   padding: 4px 18px;
   background: rgb(175, 82, 222);

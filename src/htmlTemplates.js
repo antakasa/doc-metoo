@@ -82,7 +82,6 @@ export const TwitterTweet = `<div class='twitter twiittaa'>
     <div class='ylapalkki'>
         <div><i class='fas fa-times'></i></div>
         <div id='ylapalkkiteksti'>
-            <button>Twiittaa</button>
         </div>
     </div>
     <div class='contentcontainer'>

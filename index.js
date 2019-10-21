@@ -1,5 +1,11 @@
 import '@babel/polyfill';
 import {startApp} from './src/app';
+const removeHeaderAndFooter = () => {
+  const header = document.querySelector('header');
+  if (header) header.remove();
+  const footer = document.querySelector('.ydd-footer');
+  if (footer) footer.remove();
+};
 
 const appName = process.env.APP_NAME;
 
@@ -13,6 +19,8 @@ const eventHandlers = {
     if (!root) {
       return;
     }
+
+    removeHeaderAndFooter();
     startApp(root);
   },
   //Todo: Login handlers

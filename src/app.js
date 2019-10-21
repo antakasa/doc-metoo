@@ -30,9 +30,9 @@ export const startApp = () => {
     SentMessage,
     soitto,
     soitto2,
-    evilLaugh,
-    incomingSuspense,
-    raptor,
+    uhkailu1,
+    uhkailu2,
+    uhkailu3,
   } = sounds;
   let viive,
     myVar,
@@ -55,10 +55,28 @@ export const startApp = () => {
   $('#parentWrapper').append("<div id='trigger'></div>");
 
   // start from screen0
-  screen14();
+  cover();
+
+  function cover() {
+    $('#mainWrapper').html(htmlTemplates.iconSet);
+    const {header, body, startButton} = texts.cover;
+
+    $('#mainWrapper').append(
+      `<div class='ruutu0 center'>
+  <div>
+  <div class="etusivun_logo">
+<img src=${buildPath}img/docventures_logo_heijastuksella.png>
+<h2>${header}</h2>
+<p>${body}</p>
+</div>
+         <button id="button0_0">${startButton}</button>
+  </div>
+</div>`,
+    );
+    $('#button0_0').one('click', screen0);
+  }
 
   function screen0() {
-    $('#mainWrapper').html(htmlTemplates.iconSet);
     createFullScreenMessage(
       texts.screen0.body,
       texts.screen0.startButton,
@@ -209,12 +227,11 @@ export const startApp = () => {
       $('.contentcontainer').append(htmlTemplates.TwitterCommentsContainer),
         tock.play();
       showTwitterMessage(1, texts.screen10.keskustelu, null, null, onReady);
-      $('.twitterlinkki').one('click', function() {
-        screen11();
-      });
-
       function onReady() {
-        // we wait user resopnse here
+        $('.twitterlinkki').one('click', function() {
+          screen11();
+        });
+
         return null;
       }
     }, 2000);
@@ -276,15 +293,15 @@ export const startApp = () => {
     const {puhelinnro1, puhelinnro2, puhelinnro3} = texts.screen13;
     call1();
     function call1() {
-      receivePhoneCall(puhelinnro1, evilLaugh, call2);
+      receivePhoneCall(puhelinnro1, uhkailu1, call2);
     }
 
     function call2() {
-      receivePhoneCall(puhelinnro2, raptor, call3);
+      receivePhoneCall(puhelinnro2, uhkailu2, call3);
     }
 
     function call3() {
-      receivePhoneCall(puhelinnro3, incomingSuspense, () => alert('moi'));
+      receivePhoneCall(puhelinnro3, uhkailu3, screen14);
     }
   }
 
@@ -472,6 +489,7 @@ export const startApp = () => {
           // $("#mainWrapper .postausteksti").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>");
         }
         scrollComments();
+
         // $('#commentscontainer').animate({scrollTop: $("#comments").offset().top});
 
         // JOS VIESTIN JÄLKEEN KYSYTÄÄN VAIHTOEHTOJA
@@ -808,10 +826,12 @@ export const startApp = () => {
   function scrollComments() {
     console.log('==== scrollComments ====');
     // $('#commentscontainer').animate({scrollTop: $("#comments").offset().top},100);
+
     $('#commentscontainer').animate(
       {scrollTop: $('#commentscontainer')[0].scrollHeight},
       100,
     );
+    document.querySelector('#commentscontainer').scroll(0, 1000);
     return;
   }
 };

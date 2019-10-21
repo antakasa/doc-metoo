@@ -2269,3 +2269,192 @@ animation-duration: 2s;
     color: rgb(90, 90, 90);
   }
 }
+
+#parentWrapper #mainWrapper .black {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 20% 10px;
+  background: rgba(0, 0, 0, 1);
+  font-size: 36px;
+  position: absolute;
+  z-index: 1200;
+}
+
+#parentWrapper #mainWrapper .black p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#parentWrapper #mainWrapper .lockscreen {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 19px;
+  position: absolute;
+  z-index: 1100;
+}
+
+.lockscreen .notsku {
+  width: 96%;
+  border-radius: 12px;
+  background: rgba(134, 200, 183, 0.98);
+  margin: 2%;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  overflow: auto;
+  -webkit-box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.3);
+}
+
+.lockscreen .notsku .sovellus {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.lockscreen .notsku .sovellus img {
+  width: 18px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: sub;
+}
+
+.lockscreen .notsku .otsikko {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 17px;
+  font-weight: 400;
+}
+.lockscreen .notsku .viesti {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.lockscreen .notsku.highlight {
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  width: 96%;
+  border-radius: 12px;
+  background: rgba(187, 255, 238, 0.98);
+  -webkit-box-shadow: 0px 0px 12px 12px rgba(247, 247, 247, 0.8);
+  -moz-box-shadow: 0px 0px 12px 12px rgba(247, 247, 247, 0.8);
+  box-shadow: 0px 0px 12px 12px rgba(247, 247, 247, 0.8);
+}
+
+#parentWrapper #mainWrapper .twitterlinkki {
+  font-size: 12px;
+  margin-top: 6px;
+  align-items: center;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+#parentWrapper #mainWrapper .twitterlinkki .linkkikuva img {
+  height: 80px;
+  width: auto;
+}
+
+#parentWrapper #mainWrapper .twitterlinkki .linkkikuva {
+  height: 80px;
+}
+
+#parentWrapper #mainWrapper .twitterlinkki .linkkitekstit {
+  margin: 8px;
+}
+#parentWrapper #mainWrapper .uutiset {
+  font-family: Helvetica, sans-serif;
+  background: #fff;
+  padding: 0px;
+}
+
+#parentWrapper #mainWrapper .uutiset .contentcontainer {
+  margin: 10px;
+  text-align: left;
+}
+#parentWrapper #mainWrapper .uutiset.comments .contentcontainer {
+  height: 94%;
+  color: black;
+  font-size: 16px;
+}
+
+#parentWrapper #mainWrapper .uutiset .ylapalkki {
+  overflow: auto;
+  background-color: #00809f;
+}
+#parentWrapper #mainWrapper .uutiset .ylapalkki img {
+  height: 20px;
+  margin: 10px;
+  float: left;
+}
+#parentWrapper #mainWrapper .uutiset .alapalkki {
+  position: absolute;
+  background: #fff;
+  color: rgb(70, 70, 70);
+  padding: 4px 10px;
+  font-size: 20px;
+  line-height: 22px;
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+#parentWrapper #mainWrapper .uutiset .alapalkki .kommentit {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bolder;
+}
+
+#parentWrapper #mainWrapper .uutiset .alapalkki button .far {
+  margin: 8px;
+}
+
+#parentWrapper #mainWrapper .uutiset .alapalkki button {
+  font-size: 20px;
+  margin: 6px;
+  padding: 4px 18px;
+  background: #0896d8;
+  color: #fff;
+  border-radius: 4px;
+}
+
+#parentWrapper #mainWrapper .uutiset .otsikko {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#parentWrapper #mainWrapper .uutiset .teksti {
+  color: black;
+  font-size: 16px;
+}
+
+#parentWrapper #mainWrapper .uutiset .contentcontainer .keskustelu {
+  color: black;
+  font-size: 22px;
+}
+
+#parentWrapper #mainWrapper .uutiset .kuva {
+  width: 100%;
+}
+#parentWrapper #mainWrapper .uutiset .kuva img {
+  width: 100%;
+  height: auto;
+}
+
+#parentWrapper #mainWrapper .uutiset #commentscontainer {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

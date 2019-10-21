@@ -55,7 +55,7 @@ export const startApp = () => {
   $('#parentWrapper').append("<div id='trigger'></div>");
 
   // start from screen0
-  screen7();
+  screen14();
 
   function screen0() {
     $('#mainWrapper').html(htmlTemplates.iconSet);
@@ -181,7 +181,6 @@ export const startApp = () => {
           });
         },
       };
-      console.log('as');
       window.setTimeout(
         () =>
           createFullScreenMessage(
@@ -210,41 +209,71 @@ export const startApp = () => {
       $('.contentcontainer').append(htmlTemplates.TwitterCommentsContainer),
         tock.play();
       showTwitterMessage(1, texts.screen10.keskustelu, null, null, onReady);
-      function onReady() {
+      $('.twitterlinkki').one('click', function() {
         screen11();
+      });
+
+      function onReady() {
+        // we wait user resopnse here
+        return null;
       }
     }, 2000);
   }
 
   function screen11() {
-    $('#mainWrapper').html(htmlTemplates.iconSet);
-    const {notifications} = texts.screen11;
-    let i = 0;
-    const notificationFlood = window.setInterval(e => {
-      const {media, userName, message} = notifications[i];
-      createNotification(media, userName, message, null);
-      if (i === 5) screen12();
-      if (i === notifications.length - 1) {
-        window.clearInterval(notificationFlood);
-        slideUpNotification();
-      }
-      i++;
+    $('#mainWrapper').html(
+      `
+<div class="uutiset">
+    <div class='ylapalkki'><img src='https://yle.fi/uutiset/public/img/uutiset.svg'></div>
+    <div class='contentcontainer'>
+        <div class='otsikko'>${texts.screen11.otsikko}</div>
+        <div class='teksti'>${texts.screen11.ingressi}</div>
+    </div>
+    <div class='kuva'><img src='http://lusi-dataviz.ylestatic.fi/2019-doc-metoo/img/kansanedustaja.jpg' </img></div>
+    <div class='alapalkki'>
+        <button id='lue'><span class='kommentit'>Keskustele</span><i class='far fa-comment'></i><span class='kommentit kommenttiluku'>137</span></button>
+    </div>
+</div>`,
+    );
+
+    setTimeout(function() {
+      $('#lue .kommenttiluku').text('138');
     }, 1000);
+    setTimeout(function() {
+      $('#lue .kommenttiluku').text('140');
+    }, 2300);
+
+    $('.uutiset .alapalkki').one('click', function() {
+      screen12();
+    });
   }
 
+  // UUTISKOMMENTOINTI
   function screen12() {
-    // https://codepen.io/savant/pen/idbAh
-    $('#mainWrapper').html(htmlTemplates.Clock);
+    $('#mainWrapper').html(
+      "<div class='uutiset comments'>" +
+        "<div class='ylapalkki'><img src='https://yle.fi/uutiset/public/img/uutiset.svg'></div>" +
+        "<div class='contentcontainer'><div class='keskustelu'>Keskustelu</div><div id='commentscontainer' class='twittercommentscontainer'></div></div>" +
+        '</div>',
+    );
 
-    // clockCounterAutomatic(lähtötunti, lähtöminuutit, kuinka monta minuuttia kello etenee, rullaamisen kesto)
-    clockCounterAutomatic(10, 0, 60, 4000);
-    setTimeout(screen13, 4000);
+    showTwitterMessage(
+      0,
+      texts.screen12.keskustelu,
+      'polkuplaceholder',
+      'mentions',
+      onReady,
+    );
+
+    function onReady() {
+      window.setTimeout(screen13, 2000);
+    }
   }
 
   function screen13() {
     hideNotification();
 
-    const {puhelinnro1, puhelinnro2, puhelinnro3} = texts.screen12;
+    const {puhelinnro1, puhelinnro2, puhelinnro3} = texts.screen13;
     call1();
     function call1() {
       receivePhoneCall(puhelinnro1, evilLaugh, call2);
@@ -255,12 +284,47 @@ export const startApp = () => {
     }
 
     function call3() {
-      receivePhoneCall(puhelinnro3, incomingSuspense, screen15());
+      receivePhoneCall(puhelinnro3, incomingSuspense, () => alert('moi'));
     }
   }
 
+  function screen14() {
+    $('#mainWrapper').html(
+      `<div class='black center animated fadeOut slower delay-2s'><div><p>Kaksi vuorokautta myöhemmin</p></div></div><div class='lockscreen'><div class='notskucontainer'></div></div>`,
+    );
+    $('.lockscreen').prepend(
+      `<div id='clockWrapper'><div id='clock'><span class='hours'>7</span>:<span class='minutes'>07</span></div>`,
+    );
+    $('.notskucontainer').append(
+      `<div class='notsku'><div class='sovellus'><img src='${buildPath}img/ikonit/Messages.png'>Viestit</div><div class='notskuwrapper'><div class='viesti'>Sinulla on 32 lukematonta viestiä</div></div></div>`,
+    );
+    $('.notskucontainer').append(
+      `<div class='notsku'><div class='sovellus'><img src='${buildPath}img/ikonit/Phone.png'>Puhelut</div><div class='notskuwrapper'><div class='viesti'>Sinulla on 13 vastaamatonta puhelua</div></div></div>`,
+    );
+    setTimeout(function() {
+      $('.notskucontainer').append(
+        `<div class='notsku highlight bounceInLeft animated'><div class='sovellus'><img src='${buildPath}img/ikonit/Twitter.png'>Twitter</div><div class='notskuwrapper'><div class='otsikko'>Otsikkoteksti</div><div class='viesti'>@rikurantala merkkasi sinut postaukseen</div></div></div>`,
+      );
+      notsku.play();
+      $('.black').remove();
+
+      $('.notskucontainer .highlight').one('click', function() {
+        screen15();
+      });
+    }, 5000);
+  }
+
   function screen15() {
-    yleArticleMock();
+    $('#mainWrapper').html(htmlTemplates.TwitterTweet);
+    $('.typed-cursor').hide();
+    $('.ylapalkki').addClass('twit');
+    $('.ylapalkki').html(htmlTemplates.twitterYlapalkkiReadTweet);
+    $('.contentcontainer').append(htmlTemplates.TwitterCommentsContainer),
+      tock.play();
+    showTwitterMessage(0, texts.screen15.keskustelu, null, null, onReady);
+    function onReady() {
+      () => null;
+    }
   }
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -615,14 +679,12 @@ export const startApp = () => {
             duration: obj2,
             easing: 'linear',
             step: function(now) {
-              const minsat = Math.ceil(now);
-              if (minsat.toString().length < 2) {
-                // Integer of less than two digits
-                let now = '0' + minsat; // Prepend a zero!
+              const seconds = Math.ceil(now);
+              if (seconds.toString().length < 2) {
+                $(this).text('0' + seconds.toString());
               } else {
-                now = minsat;
+                $(this).text(seconds);
               }
-              $(this).text(now);
             },
           },
         );

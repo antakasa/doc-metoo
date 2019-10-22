@@ -2,9 +2,9 @@ import '@babel/polyfill';
 import {startApp} from './src/app';
 const removeHeaderAndFooter = () => {
   const header = document.querySelector('header');
-  if (header) header.remove();
+  if (header) header.style.display = 'none';
   const footer = document.querySelector('.ydd-footer');
-  if (footer) footer.remove();
+  if (footer) footer.style.display = 'none';
 };
 
 const appName = process.env.APP_NAME;

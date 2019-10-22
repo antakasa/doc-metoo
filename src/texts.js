@@ -19,12 +19,12 @@ const giveRandomAvatar = (function() {
 /// TEKSTIT ALKAA
 export const cover = {
   header: 'Miltä nettihäirintä tuntuu?',
-  body: 'Testaa itse Docventuresin simulakrumissa!',
-  startButton: 'Eteenpäin',
+  body: 'Pelaa Docventuresin Angry Boysia!',
+  startButton: 'Aloita',
 };
 export const screen0 = {
   body:
-    'Tämä juttu perustuu todellisiin esimerkkeihin ja saattaa sisältää ahdistavaa materiaalia',
+    'Tämä juttu perustuu todellisiin esimerkkeihin ja saattaa sisältää ahdistavaa materiaalia.',
   startButton: 'Eteenpäin',
 };
 
@@ -49,7 +49,7 @@ export const screen3 = {
     {
       oikeavasen: 'vasen',
       viesti:
-        'Vaikuttaja: Ehkä törmätään siellä sun nurkilla, näyt aika usein käyvän kulmakahvilassasi…',
+        'Ehkä törmätään siellä sun nurkilla, näyt aika usein käyvän kulmakahvilassasi…',
       viive: 1200,
     },
     {
@@ -81,9 +81,9 @@ export const screen3 = {
     {
       oikeavasen: 'none',
       kysymys:
-        'Viestit alkavat olla jo uhkaavia. Pitäisikö asialle tehdä jotain?',
-      button1: 'Kysyt apua somessa',
-      button2: 'Paljastat nilkin puuhat',
+        'Viestit alkavat vähitellen tuntua uhkaavilta. Mitä teet asialle?',
+      button1: 'Kysyn apua somessa',
+      button2: 'Paljastan nilkin puuhat',
       viive: 3000,
     },
   ],
@@ -106,13 +106,13 @@ export const screen5 = {
       meta: '1: kansanedustajan vastauspostaus syytöksiin',
       viesti: '@abc valehtelee! ',
       userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
-      username: 'kansanedustaja',
-      userhandle: '@handle',
+      username: 'vaikuttaja',
+      userhandle: '@vaikuttaja',
       viive: 0,
     },
     {
       viesti:
-        ' Itsehän sitä kerjäsit, kun avasit keskustelun niin naurettavalla mielipiteellä.... #eikömitäänsaaenääsana',
+        ' Itsehän sitä kerjäsit, kun avasit keskustelun niin naurettavalla mielipiteellä.... #eikömitäänsaaenääsanoa',
       userpic: giveRandomAvatar('female'),
       username: 'vapaa111sana',
       userhandle: '@vapaa111sana',
@@ -127,7 +127,7 @@ export const screen5 = {
     },
     {
       viesti:
-        'Joopa joo, ihanku @vaikuttajalla olisi aikaa lähetellä jollekin viestejä. Kuka edes on tämä ihminen ja mistä kohusta se puhuu?',
+        'Joopa joo, ihanku @vaikuttaja lla olisi aikaa lähetellä jollekin viestejä. Kuka edes on tämä ihminen ja mistä kohusta se puhuu?',
       userpic: giveRandomAvatar('male'),
       username: 's4nonpav44n',
       userhandle: '@s4nonpav44n',
@@ -155,14 +155,15 @@ export const screen5 = {
     viesti: 'Miksi menit julkaisemaan tuollaista paskaa?',
     viive: 0,
     userpic: `${buildPath}img/kansanedustaja.jpg`,
-    username: 'kansanedustaja tms',
+    username: 'Vaikuttaja',
   },
 };
 export const screen6 = {
   userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
   username: 'Vaikuttaja',
+  userhandle: '@vaikuttaja',
   notificationMessage:
-    'Täällä on taas joku @käyttäjä-rukka kuvitellut liikaa itsestään. En ole ollut...',
+    'Täällä on taas joku @kayttaja rukka kuvitellut liikaa itsestään. En ole ollut...',
   keskustelu: [
     {
       oikeavasen: 'vasen',
@@ -185,8 +186,8 @@ export const screen6 = {
       viesti:
         'Sovitaanko, ettet julkaise enää mitään minuun liittyvää somessa ja tunnustat valeesi?',
       viive: 1000,
-      button1: 'Jätä minut rauhaan!',
-      button2: 'Ei sovita',
+      button1: 'Jätä mut rauhaan!',
+      button2: 'Ei!',
     },
     {
       oikeavasen: 'oikea',
@@ -207,14 +208,14 @@ export const screen7 = {
     {
       meta: '1: kansanedustajan vastauspostaus syytöksiin',
       viesti:
-        'Täällä on taas joku @käyttäjä-rukka kuvitellut liikaa itsestään. En ole ollut häneen missään yhteydessä viime viikon twiittini jälkeen. Ja kuka tahansa voi itse käydä katsomassa, oliko se "häirintää". #mustamaalaus #maalittaminen',
-      userpic: 'img/kansanedustaja.jpg',
-      username: 'kansanedustaja',
+        'Täällä on taas joku @käyttajä parka kuvitellut liikaa itsestään. En ole ollut häneen missään yhteydessä viime viikon twiittini jälkeen. Ja kuka tahansa voi itse käydä katsomassa, oliko se "häirintää". #mustamaalaus #maalittaminen',
+      userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
+      username: 'vaikuttaja',
       userhandle: '@handle',
       viive: 0,
     },
     {
-      viesti: `Jo on taas joillakin ongelmat. Ei hyvää päivää @käyttäjä. Mitenkähän noille lumihiutaleille käy, kun kohtaavat elämässä ihan oikeita ongelmia?`,
+      viesti: `Jo on taas joillakin ongelmat. Ei hyvää päivää @kayttajäa. Mitenkähän noille lumihiutaleille käy, kun kohtaavat elämässä ihan oikeita ongelmia?`,
       userpic: giveRandomAvatar('female'),
       username: '65kansanasialla',
       userhandle: '@65kansanasialla',
@@ -222,21 +223,22 @@ export const screen7 = {
     },
     {
       viesti:
-        'Huhhuh tsemppiä @vaikuttaja, älä alistu näiden #metoo-huorien vallan alle. @käyttäjä lle tekisi hyvää nähdä, millaista elämä on muualla kuin täällä hyysäys-Suomessa…',
+        'Huhhuh tsemppiä @vaikuttaja, älä alistu näiden #metoo-huorien vallan alle. @kayttaja lle tekisi hyvää nähdä, millaista elämä on muualla kuin täällä hyysäys-Suomessa…',
       userpic: giveRandomAvatar(),
       username: 'Hyysaaja00',
       userhandle: '@Hyysaaja00',
       viive: 1200,
     },
     {
-      viesti: '@käyttäjä Jos ei kestä kuumuutta, mee vittuun tulen ääreltä.',
+      viesti:
+        '@kayttaja Jos ei kestä kuumuutta, voi mennä vittuun tulen ääreltä.',
       userpic: giveRandomAvatar(),
       username: 'killer1poliisi666',
       userhandle: '@killer1poliisi666',
       viive: 1200,
     },
     {
-      viesti: '@käyttäjä Oisit hiljaa ruma läski',
+      viesti: '@kayttaja Oisit hiljaa ruma läski',
       userpic: giveRandomAvatar(),
       username: 'xdxd1234',
       userhandle: '@xdxd1234',
@@ -254,7 +256,7 @@ export const screen8 = {
     },
     {
       media: 'Gmail',
-      userName: 'seppo.suosio222@luukku.com',
+      userName: 'seppo.suosio111@luukku.com',
       message: 'saatanan huomionhakuinen huijari helvetti hevosenkyr...',
     },
     {
@@ -269,17 +271,17 @@ export const screen8 = {
     },
     {
       media: 'Messages',
-      userName: '05555',
+      userName: '050555',
       message: 'Tiedän osoitteesi!!!',
     },
     {
       media: 'Messages',
-      userName: '066666',
+      userName: '0466666',
       message: 'VALEHTELIJAHUORA',
     },
     {
       media: 'Messages',
-      userName: '9999',
+      userName: '0509999',
       message:
         'Nytkö meni pupu pöksyyn kun et enää vastaa viesteihin TTwitterissä????',
     },
@@ -287,7 +289,7 @@ export const screen8 = {
   // Tässä käyttäjä reagoi eli puolustatuu tai luovuttaa
   question: 'Mitä teet?',
   optionA: 'Nyt saa riittää!',
-  optionB: 'Asiallisuus maan perii',
+  optionB: 'Asiallisuus maan perii!',
 };
 export const screen9 = {
   // Näissä ensimmäinen arrayssa on "pieleen menevä" kirjoitus
@@ -328,8 +330,7 @@ export const screen10 = {
       viive: 1200,
     },
     {
-      viesti:
-        'Kaikki ovat jo saaneet tietää, millainen kusettaja olet http://uutisia.fi/uutinen232999709',
+      viesti: 'Kaikki ovat jo saaneet tietää, millainen kusettaja olet',
       userpic: giveRandomAvatar('male'),
       username: 'suomenäijinäij4',
       userhandle: '@suomenäijinäij4',
@@ -354,7 +355,7 @@ export const screen10 = {
 export const screen11 = {
   otsikko: 'Vaikuttaja vastaa somesyytöksiin: "En ole tehnyt mitään väärää"',
   ingressi:
-    'Tunnettu vaikuttaja on ollut iltapäivän sairaslomalla somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Onko #metoo mennyt liian pitkälle?',
+    'Tunnettu vaikuttaja on ollut iltapäivän sairaslomalla somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Vaikuttaja on saanut tukea monilta julkisuuden henkilöiltä, joiden mukaan #metoo-liike syyllistää miehiä.',
 };
 export const screen12 = {
   // Uutisen kommentit
@@ -392,7 +393,7 @@ export const screen12 = {
       userpic: '',
     },
     {
-      viesti: 'Kuka tää @käyttäjä muka on 🤣🤣🤣🤣🤣 menis kotiinsa kasvamaan',
+      viesti: 'Kuka tää @kayttaja muka on 🤣🤣🤣🤣🤣 menis kotiinsa kasvamaan',
       username: 'peräkyläläinen',
       viive: '1200',
       userpic: '',
@@ -403,7 +404,7 @@ export const screen12 = {
 export const screen13 = {
   // puhelut
   puhelinnro1: 'Tuntematon numero',
-  puhelinnro2: 'Tuntematon numero',
+  puhelinnro2: '04123456',
   puhelinnro3: 'Tuntematon numero',
 };
 export const screen14 = {}; // ei kaiketi mitään;
@@ -412,7 +413,7 @@ export const eiKayttoa = {
   keskustelu: [
     {
       viesti:
-        'Vaikuttaja on KUNNON MIES!! @käyttäjä kaipaa opetusta mitä käy metoovalehtelijoille...',
+        'Vaikuttaja on KUNNON MIES!! @kayttaja kaipaa opetusta mitä käy metoovalehtelijoille...',
       userpic: giveRandomAvatar('female'),
       username: 'itsenäinentotuu5_',
       userhandle: '@itsenäinentotuu5_',
@@ -420,21 +421,21 @@ export const eiKayttoa = {
     },
     {
       viesti:
-        'Nyt sitten sanotaan että vasta minämyös-kampanjan vuoksi on uskallettu puhua. Tiedoksi @käyttäjä se ei takaa oikeutta syyttää jokaikistä miestä kaikesta keksitystä',
+        'Nyt sitten sanotaan että vasta minämyös-kampanjan vuoksi on uskallettu puhua. Tiedoksi @kayttaja se ei takaa oikeutta syyttää jokaikistä miestä kaikesta keksitystä',
       userpic: giveRandomAvatar(),
       username: 'ssmaailma4300',
       userhandle: '@ssmaailma4300',
       viive: 1200,
     },
     {
-      viesti: '@käyttäjä Ime munaa huora sut maalitettiin kun hankit huomiot',
+      viesti: '@kayttaja Ime munaa huora sut maalitettiin kun hankit huomiot',
       userpic: giveRandomAvatar(),
       username: 'elovenako612612',
       userhandle: '@elovenako612612',
       viive: 1200,
     },
     {
-      viesti: '@käyttäjä oo hiljaa ruma läski',
+      viesti: '@kayttaja oo hiljaa ruma läski',
       userpic: giveRandomAvatar(),
       username: 'sotajabaxd888',
       userhandle: '@sotajabaxd888',
@@ -445,8 +446,7 @@ export const eiKayttoa = {
 export const screen15 = {
   keskustelu: [
     {
-      viesti:
-        ' Mitä ihmettä nyt taas jengi?! Eiköhän tämä somemestaus jo riitä? Meitsi on sun puolella @käyttäjä, kukaan ei ansaitse tällaista myllytystä. Tsemppiä!!!',
+      viesti: ' Nyt vihellys pilliin ja peli poikki!',
       userpic: `${buildPath}img/rikurantala.jpg`,
       username: 'Riku Rantala',
       userhandle: '@rikurantala',
@@ -454,22 +454,23 @@ export const screen15 = {
     },
     {
       viesti:
-        ' Tätä tapahtuu ihan liikaa ja erityisesti naisille, häirintä lähtee lapasista aivan mitättömistä jutuista. JOKU ROTI TÄHÄN TOUHUUN! EI ANNETA ÖYKKÄREIDEN MÖYHÖTTÄÄ RAUHASSA. Jos näet jonkun joutuneen paskamyrskyyn, PUUTU PELIIN ja asetu uhrin puolelle!',
+        ' AIVAN liian harvoin puutumme häirintään. Aivan. Liian. Harvoin. ',
+      userpic: `${buildPath}img/rikurantala.jpg`,
+      username: 'Riku Rantala',
+      userhandle: '@rikurantala',
+      viive: 1200,
+    },
+    {
+      viesti:
+        ' Tätä tapahtuu ihan liikaa ja erityisesti naisille, häirintä lähtee lapasista aivan mitättömistä jutuista. Ja miksi me ei puututa? Ei ole aikaa, ei koske juuri nyt juuri minua, ulkopuolelta ei tajua koko ongelman laajuutta, eikä jaksaisi itse joutua suohon. Sellaisiako me ollaan? ',
       userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',
       viive: 1200,
     },
     {
-      viesti: ' Ei liikaa näy jäbiä näissä puuhissa. ',
-      userpic: `${buildPath}img/rikurantala.jpg`,
-      username: 'Riku Rantala',
-      userhandle: '@rikurantala',
-      viive: 1200,
-    },
-    {
       viesti:
-        ' Jos taas olet kohdannut häirintää (kaikki sympatiat tyypille täältä!), niin esim. näistä jutuista voi olla hyötyä: <a href="https://twitter.com/vehkoo/status/927846892154884096">https://twitter.com/vehkoo/status/927846892154884096 ja <a href="https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/">https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/</a>',
+        ' Osallistut #metoohon ehkä parhaiten, kun puolustat häirinnän kohteeksi joutuneita ihmisiä – myös täällä somen rinnakkaistodellisuudessa! Jos taas olet kohdannut häirintää (kaikki sympatiat täältä!), niin esim. näistä jutuista voi olla hyötyä: <a href="https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/">https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/</a>',
       userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',

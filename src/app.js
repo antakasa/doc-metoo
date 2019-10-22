@@ -283,7 +283,10 @@ export const startApp = () => {
     );
 
     function onReady() {
-      window.setTimeout(screen13, 2000);
+      //window.setTimeout(screen13, 2000);
+      createNotification('Messages', '23433112', 'huora', () => {
+        screen13();
+      });
     }
   }
 
@@ -405,11 +408,12 @@ export const startApp = () => {
 
     ringtone.currentTime = 0;
     ringtone.loop = true;
+    ringtone.muted = false;
     ringtone.play();
-
+    let timeout;
     $('.accept').one('click', function() {
       ringtone.pause();
-      $('.decline').off();
+      //      $('.decline').off();
       audio.play();
       audio.duration;
       $('.soitto .accept').hide();
@@ -419,18 +423,20 @@ export const startApp = () => {
         "<div class='aika'><span class='hours'>00</span>:<span class='minutes'>59</span></div>",
       );
       numberCounter(0, 59000);
-      setTimeout(function() {
+      timeout = setTimeout(function() {
         $('.soitto').hide();
         onReady();
-      }, audio.duration * 1000);
+      }, audio.duration * 1000 + 3000);
       $('.ryhma .pikkuikonit').html(
         "<div class='answered'><div><i class='fas fa-microphone-slash'></i>mykistä</div><div><i class='fas fa-th'></i>näppäimistö</div><div><i class='fas fa-volume-up'></i>kaiutin</div><div><i class='fas fa-plus'></i>lisää puhelu</div><div><i class='fas fa-video'></i>FaceTime</div><div><i class='fas fa-user'></i>yhteystiedot</div></div>",
       );
     });
     $('.decline').one('click', function() {
       ringtone.pause();
+      audio.pause();
       $('.soitto').hide();
       onReady();
+      clearTimeout(timeout);
     });
   }
 

@@ -24,7 +24,7 @@ export const cover = {
 };
 export const screen0 = {
   body:
-    'Tämä juttu perustuu todellisiin esimerkkeihin ja saattaa sisältää ahdistavaa materiaalia.',
+    'Valtaosa häirinnän kohteista on naisia. Tämä juttu perustuu todellisiin esimerkkeihin ja saattaa sisältää ahdistavaa materiaalia.',
   startButton: 'Eteenpäin',
 };
 
@@ -66,7 +66,7 @@ export const screen3 = {
     },
     {
       oikeavasen: 'oikea',
-      viesti: "Haistappa kuule paska! <span class='utf'>&#x1F595;</span> ",
+      viesti: "Haistappa kuule pa**a! <span class='utf'>&#x1F595;</span> ",
       viesti2: 'Ei kiitos',
       viive: 0,
     },
@@ -84,7 +84,7 @@ export const screen3 = {
         'Viestit alkavat vähitellen tuntua uhkaavilta. Mitä teet asialle?',
       button1: 'Kysyn apua somessa',
       button2: 'Paljastan nilkin puuhat',
-      viive: 3000,
+      viive: 5000,
     },
   ],
 };
@@ -208,14 +208,14 @@ export const screen7 = {
     {
       meta: '1: kansanedustajan vastauspostaus syytöksiin',
       viesti:
-        'Täällä on taas joku @käyttajä parka kuvitellut liikaa itsestään. En ole ollut häneen missään yhteydessä viime viikon twiittini jälkeen. Ja kuka tahansa voi itse käydä katsomassa, oliko se "häirintää". #mustamaalaus #maalittaminen',
+        'Täällä on taas joku @kayttaja parka kuvitellut liikaa itsestään. En ole ollut häneen missään yhteydessä viime viikon twiittini jälkeen. Ja kuka tahansa voi itse käydä katsomassa, oliko se "häirintää". #mustamaalaus #maalittaminen',
       userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
       username: 'vaikuttaja',
-      userhandle: '@handle',
+      userhandle: '@vaikuttaja',
       viive: 0,
     },
     {
-      viesti: `Jo on taas joillakin ongelmat. Ei hyvää päivää @kayttajäa. Mitenkähän noille lumihiutaleille käy, kun kohtaavat elämässä ihan oikeita ongelmia?`,
+      viesti: `Jo on taas joillakin ongelmat. Ei hyvää päivää @kayttaja. Mitenkähän noille lumihiutaleille käy, kun kohtaavat elämässä ihan oikeita ongelmia?`,
       userpic: giveRandomAvatar('female'),
       username: '65kansanasialla',
       userhandle: '@65kansanasialla',
@@ -295,7 +295,7 @@ export const screen9 = {
   // Näissä ensimmäinen arrayssa on "pieleen menevä" kirjoitus
   textAOption: [
     'Kun kerroin ahdistel',
-    'Kun kerroin minuun kohdistuneesta häirinnästä, uhkasi @vaikuttaja vaientaa minut lopullisesti ja niin näyttää käyvän, ahdisteluviestien määrä on moninkertaistunut hänen twiittinsä jälkeen. Seuraavaksi poliisi-ilmoitus!!!',
+    'Kun kerroin minuun kohdistuneesta häirinnästä, uhkasi @vaikuttaja vaientaa minut lopullisesti ja niin näyttää käyvän, ahdisteluviestien määrä on moninkertaistunut hänen twiittinsä jälkeen. Seuraavaksi poliisi-ilmoitus!',
   ],
   textBOption: [
     'Jättäkää minut rauh',
@@ -355,7 +355,7 @@ export const screen10 = {
 export const screen11 = {
   otsikko: 'Vaikuttaja vastaa somesyytöksiin: "En ole tehnyt mitään väärää"',
   ingressi:
-    'Tunnettu vaikuttaja on ollut iltapäivän sairaslomalla somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Vaikuttaja on saanut tukea monilta julkisuuden henkilöiltä, joiden mukaan #metoo-liike syyllistää miehiä.',
+    'Tunnettu vaikuttaja on jäänyt sairaslomalle somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Vaikuttaja on saanut tukea monilta julkisuuden henkilöiltä, joiden mukaan #metoo-liike syyllistää miehiä.',
 };
 export const screen12 = {
   // Uutisen kommentit
@@ -446,7 +446,8 @@ export const eiKayttoa = {
 export const screen15 = {
   keskustelu: [
     {
-      viesti: ' Nyt vihellys pilliin ja peli poikki!',
+      viesti:
+        ' Nyt vihellys pilliin ja peli poikki! Loppu @kayttaja n somemestaukselle!',
       userpic: `${buildPath}img/rikurantala.jpg`,
       username: 'Riku Rantala',
       userhandle: '@rikurantala',
@@ -462,7 +463,7 @@ export const screen15 = {
     },
     {
       viesti:
-        ' Tätä tapahtuu ihan liikaa ja erityisesti naisille, häirintä lähtee lapasista aivan mitättömistä jutuista. Ja miksi me ei puututa? Ei ole aikaa, ei koske juuri nyt juuri minua, ulkopuolelta ei tajua koko ongelman laajuutta, eikä jaksaisi itse joutua suohon. Sellaisiako me ollaan? ',
+        ' Häirintä lähtee lapasista aivan mitättömistä jutuista! Ja miksi me ei puututa? Ei ole aikaa, ei koske juuri nyt juuri minua, ei jaksaisi itse joutua suohon, ulkopuolisena ei tajua ongelman laajuutta. Sellaisiako me ollaan? ',
       userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',
@@ -470,7 +471,7 @@ export const screen15 = {
     },
     {
       viesti:
-        ' Osallistut #metoohon ehkä parhaiten, kun puolustat häirinnän kohteeksi joutuneita ihmisiä – myös täällä somen rinnakkaistodellisuudessa! Jos taas olet kohdannut häirintää (kaikki sympatiat täältä!), niin esim. näistä jutuista voi olla hyötyä: <a href="https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/">https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/</a>',
+        ' Osallistut #metoohon ehkä parhaiten, kun puolustat häirinnän kohteeksi joutuneita ihmisiä – myös täällä somen rinnakkaistodellisuudessa! Jos taas olet kohdannut häirintää (kaikki sympatiat @kayttaja täältäkin!), esim. tästä jutusta voi olla hyötyä taviksellekin: <a href="https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/">https://www.journalisti.fi/artikkelit/2018/13/vihakampanja-kynnistyy-toimi-nin/</a>',
       userpic: `${buildPath}img/tunnamilonoff.png`,
       username: 'Tunna Milonoff',
       userhandle: '@TunnaMilonoff',

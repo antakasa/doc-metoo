@@ -23,7 +23,7 @@ p {
 .etusivun_logo {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -233,8 +233,28 @@ p {
   z-index: 1100;
   top: 0;
 }
+
+#mainWrapper .ruutu0.cover {
+  background-image: url('../public/img/ab_tausta.png');
+  background-size: cover;
+}
+
+.ruutu0.cover h2 {
+  text-shadow: 0px 0px 4px black;
+}
+
+.ruutu0.cover button {
+  background-color: white !important;
+  color: black !important;
+  font-weight: bold !important;
+}
+
 #mainWrapper .ruutu0 p {
   text-shadow: 0px 0px 4px black;
+}
+
+.ruutu0 img {
+  margin-bottom: 30%;
 }
 
 #mainWrapper > div:first-of-type {

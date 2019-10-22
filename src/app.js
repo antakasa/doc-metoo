@@ -14,6 +14,7 @@ import {buildPath} from './constants';
 import Typed from 'typed.js';
 import yleArticleMock from './yleArticleMock.js';
 import './helpers';
+import ABLogo from './public/img/ab_logo.png';
 export const startApp = () => {
   const {
     alarm,
@@ -60,12 +61,11 @@ export const startApp = () => {
   function cover() {
     $('#mainWrapper').html(htmlTemplates.iconSet);
     const {header, body, startButton} = texts.cover;
-
     $('#mainWrapper').append(
-      `<div class='ruutu0 center'>
+      `<div class='ruutu0 center cover'>
   <div>
   <div class="etusivun_logo">
-<img src=${buildPath}img/docventures_logo_heijastuksella.png>
+<img src=${ABLogo}>
 <h2>${header}</h2>
 <p>${body}</p>
 </div>
@@ -77,24 +77,45 @@ export const startApp = () => {
   }
 
   function screen0() {
-    createFullScreenMessage(
-      texts.screen0.body,
-      texts.screen0.startButton,
-      screen1,
+    const {header, body, startButton} = texts.screen0;
+    $('.ruutu0').remove();
+
+    $('#mainWrapper').append(
+      `<div class='ruutu0 center cover'>
+  <div>
+  <div class="etusivun_logo">
+<img src=${ABLogo}>
+<p>${body}</p>
+</div>
+         <button id="button0_0">${startButton}</button>
+  </div>
+</div>`,
     );
+    $('#button0_0').off();
+    $('#button0_0').one('click', screen1);
   }
 
   function screen1() {
-    createFullScreenMessage(
-      texts.screen1.body,
-      texts.screen1.startButton,
-      screen2,
+    const {header, body, startButton} = texts.screen1;
+    $('.ruutu0').remove();
+    $('#mainWrapper').html(htmlTemplates.iconSet);
+    $('#mainWrapper').append(
+      `<div class='ruutu0 center cover'>
+  <div>
+  <div class="etusivun_logo">
+<img src=${ABLogo}>
+<p>${body}</p>
+</div>
+         <button id="button0_0">${startButton}</button>
+  </div>
+</div>`,
     );
+    $('#button0_0').one('click', screen2);
   }
   function screen2() {
     // if fullscreen message present remove it
-    $('.ruutu0').remove();
 
+    $('.ruutu0').remove();
     const {username, keskustelu} = texts.screen3;
     createNotification('Messages', username, keskustelu[0].viesti, screen3);
   }
@@ -323,7 +344,7 @@ export const startApp = () => {
     );
     setTimeout(function() {
       $('.notskucontainer').append(
-        `<div class='notsku highlight bounceInLeft animated'><div class='sovellus'><img src='${buildPath}img/ikonit/Twitter.png'>Twitter</div><div class='notskuwrapper'><div class='otsikko'>Otsikkoteksti</div><div class='viesti'>@rikurantala merkkasi sinut postaukseen</div></div></div>`,
+        `<div class='notsku highlight bounceInLeft animated'><div class='sovellus'><img src='${buildPath}img/ikonit/Twitter.png'>Twitter</div><div class='notskuwrapper'><div class='otsikko'>233 uutta ilmoitusta</div><div class='viesti'>@rikurantala merkitsi sinut postaukseen</div></div></div>`,
       );
       notsku.play();
       $('.black').remove();
@@ -426,6 +447,7 @@ export const startApp = () => {
       timeout = setTimeout(function() {
         $('.soitto').hide();
         onReady();
+        audio.pause();
       }, audio.duration * 1000 + 3000);
       $('.ryhma .pikkuikonit').html(
         "<div class='answered'><div><i class='fas fa-microphone-slash'></i>mykistä</div><div><i class='fas fa-th'></i>näppäimistö</div><div><i class='fas fa-volume-up'></i>kaiutin</div><div><i class='fas fa-plus'></i>lisää puhelu</div><div><i class='fas fa-video'></i>FaceTime</div><div><i class='fas fa-user'></i>yhteystiedot</div></div>",
@@ -686,7 +708,7 @@ export const startApp = () => {
     }
     // JOS KESKUSTELU OHI
     else {
-      onReady();
+      if (onReady && typeof onReady === 'function') onReady();
       return;
     }
   }

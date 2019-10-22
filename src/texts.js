@@ -1,4 +1,5 @@
 import {buildPath} from './constants';
+import egghead from './public/img/egghead.png';
 /// Avatar-kuvien haku, älä välitä tästä
 const giveRandomAvatar = (function() {
   let counter = {
@@ -12,7 +13,7 @@ const giveRandomAvatar = (function() {
         : 'https://randomuser.me/api/portraits/men/';
     if (!sex) sex = 'male';
     counter[sex] += 1;
-    return `${root}${counter[sex]}.jpg`;
+    return egghead;
   };
 })();
 
@@ -38,7 +39,7 @@ export const screen2 = {};
 
 export const screen3 = {
   userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
-  username: 'Vaikuttaja',
+  username: 'Vaikuttaja 123 ',
   keskustelu: [
     {
       oikeavasen: 'vasen',
@@ -155,12 +156,12 @@ export const screen5 = {
     viesti: 'Miksi menit julkaisemaan tuollaista paskaa?',
     viive: 0,
     userpic: `${buildPath}img/kansanedustaja.jpg`,
-    username: 'Vaikuttaja',
+    username: 'Vaikuttaja 123',
   },
 };
 export const screen6 = {
   userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
-  username: 'Vaikuttaja',
+  username: 'Vaikuttaja 123',
   userhandle: '@vaikuttaja123',
   notificationMessage:
     'Täällä on taas joku @kayttaja rukka kuvitellut liikaa itsestään. En ole ollut...',
@@ -210,7 +211,7 @@ export const screen7 = {
       viesti:
         'Täällä on taas joku @kayttaja parka kuvitellut liikaa itsestään. En ole ollut häneen missään yhteydessä viime viikon twiittini jälkeen. Ja kuka tahansa voi itse käydä katsomassa, oliko se "häirintää". #mustamaalaus #maalittaminen',
       userpic: `${buildPath}img/kansanedustaja_pyorea.jpg`,
-      username: 'vaikuttaja',
+      username: 'Vaikuttaja 123',
       userhandle: '@vaikuttaja123',
       viive: 0,
     },
@@ -344,7 +345,7 @@ export const screen10 = {
       viive: 1200,
     },
     {
-      viesti: `ei sua kukaan enää usko ruma ihmissyöpä menisit vaan saunan taakse omatoimisesti tai tulispa sulle muutama vieras. <div class='twitterlinkki'><div class='linkkikuva'><img src='${buildPath}img/kansanedustaja.jpg'></div><div class='linkkitekstit'><strong>Vaikuttaja vastaa somesyytöksiin: "En ole tehnyt mitään väärää</strong><br>Tunnettu vaikuttaja on ollut iltapäivän sairaslomalla somekohun vuoksi.</div>`,
+      viesti: `ei sua kukaan enää usko ruma ihmissyöpä menisit vaan saunan taakse omatoimisesti tai tulispa sulle muutama vieras. <div class='twitterlinkki'><div class='linkkikuva'><img src='${buildPath}img/kansanedustaja.jpg'></div><div class='linkkitekstit'><strong>Vaikuttaja 123 vastaa somesyytöksiin: "En ole tehnyt mitään väärää</strong><br>Tunnettu vaikuttaja on ollut iltapäivän sairaslomalla somekohun vuoksi.</div>`,
       userpic: giveRandomAvatar(),
       username: 'faragni4545',
       userhandle: '@faragni4545',
@@ -353,9 +354,10 @@ export const screen10 = {
   ],
 };
 export const screen11 = {
-  otsikko: 'Vaikuttaja vastaa somesyytöksiin: "En ole tehnyt mitään väärää"',
+  otsikko:
+    'Vaikuttaja 123 vastaa somesyytöksiin: "En ole tehnyt mitään väärää"',
   ingressi:
-    'Tunnettu vaikuttaja on jäänyt sairaslomalle somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Vaikuttaja on saanut tukea monilta julkisuuden henkilöiltä, joiden mukaan #metoo-liike syyllistää miehiä.',
+    'Tunnettu vaikuttaja on jäänyt sairaslomalle somekohun vuoksi. Hänen mukaansa kyse on väärinkäsityksestä. Vaikuttaja 123 on saanut tukea monilta julkisuuden henkilöiltä, joiden mukaan #metoo-liike syyllistää miehiä.',
 };
 export const screen12 = {
   // Uutisen kommentit
@@ -370,7 +372,7 @@ export const screen12 = {
     },
     {
       viesti:
-        'Vaikuttaja on mukava mies ja joutuu kärsimään aivan täysin turhaan. Jättäkää jo rauhaan!!',
+        'Vaikuttaja 123 on mukava mies ja joutuu kärsimään aivan täysin turhaan. Jättäkää jo rauhaan!!',
       username: 'MarjaLissu65',
       viive: '1200',
       userpic: '',
@@ -386,7 +388,7 @@ export const screen12 = {
     },
     {
       viesti:
-        'Rikosoikeudelliseen vastuuseen pitää tällaisesta paskapuheesta joutua. Vaikuttaja, tsempit sulle ja kunnianloukkaussyytettä vaan kehiin!',
+        'Rikosoikeudelliseen vastuuseen pitää tällaisesta paskapuheesta joutua. Vaikuttaja 123, tsempit sulle ja kunnianloukkaussyytettä vaan kehiin!',
       username: 'EntPoliisi',
       viive: '1200',
       userhandle: '',
@@ -413,7 +415,7 @@ export const eiKayttoa = {
   keskustelu: [
     {
       viesti:
-        'Vaikuttaja on KUNNON MIES!! @kayttaja kaipaa opetusta mitä käy metoovalehtelijoille...',
+        'Vaikuttaja 123 on KUNNON MIES!! @kayttaja kaipaa opetusta mitä käy metoovalehtelijoille...',
       userpic: giveRandomAvatar('female'),
       username: 'itsenäinentotuu5_',
       userhandle: '@itsenäinentotuu5_',
